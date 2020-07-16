@@ -1,4 +1,4 @@
-execute as @e run function bullet_time:update_scoreboards
+execute as @a run function bullet_time:update_scoreboards
 tag @e remove notReallyOnGround
 tag @e remove twoBlocksInAir
 execute as @e at @s if block ~ ~-2 ~ minecraft:air if block ~ ~-1.5 ~ minecraft:air run tag @s add twoBlocksInAir
@@ -12,23 +12,13 @@ execute if entity @e[team=noCollide,nbt={SelectedItem:{id:"minecraft:bow"}},tag=
 
 execute as @e[tag=paragliding] run function bullet_time:tick_paraglider
 
-execute as @e[type=arrow,tag=!customArrow] at @s run function bullet_time:new_elemental_arrow
-execute as @e[type=arrow,tag=customArrow] at @s run function bullet_time:tick_elemental_arrow
-execute as @e[tag=customArrowMarker,tag=!handledArrowMarker] at @s unless entity @e[distance=..2,nbt={inGround:0b},type=arrow] run function bullet_time:arrow_hit
+execute as @e[type=arrow,tag=!old] at @s run function bullet_time:new_elemental_arrow
+execute as @e[type=arrow,nbt={CustomPotionEffects:[{Id:26b}]}] at @s run function bullet_time:tick_elemental_arrow
+execute as @e[nbt={ActiveEffects:[{Id:26b}]}] at @s anchored eyes run function bullet_time:arrow_hit
+execute as @e[type=arrow,tag=old,tag=!landed,nbt={inGround:1b}] at @s anchored eyes run function bullet_time:arrow_hit
 execute as @e[tag=bulletTime] run function bullet_time:tick_bullet_time
-#execute as @e[nbt={inGround:1b},type=arrow,limit=1,sort=nearest] unless entity @s[tag=!iceArrow,tag=!flameArrow,tag=!bombArrow,tag=!ancientArrow] run kill @s
 
-execute at @e[tag=frozen] run particle minecraft:firework ~ ~1.5 ~ .2 .25 .2 0 1
-execute at @e[scores={iceTimer=1},tag=!iceArrowMarker] if block ~ ~ ~ ice if block ~ ~1 ~ ice run fill ~ ~ ~ ~ ~1 ~ air destroy
-execute as @e[scores={iceTimer=1},tag=!iceArrowMarker,tag=!bulletTimeSlowed] at @s run data merge entity @s {NoAI:0b}
-execute as @e[scores={iceTimer=1},tag=!iceArrowMarker] at @s run data merge entity @s {Invulnerable:0b}
-execute as @e[scores={iceTimer=1},tag=!iceArrowMarker] run tag @s remove frozen
-
-execute at @e[scores={iceTimer=1..},tag=iceArrowMarkerMissed] run particle minecraft:firework ~ ~1 ~ .65 .25 .65 0 1
-execute at @e[scores={iceTimer=1},tag=iceArrowMarkerMissed] if block ~ ~ ~ ice run fill ~ ~ ~ ~ ~ ~ air destroy
-
-scoreboard players remove @e[scores={iceTimer=0..}] iceTimer 1
-kill @e[scores={iceTimer=0},tag=customArrowMarker]
+execute as @e[scores={iceTimer=0..}] at @s run function bullet_time:tick_ice
 
 execute as @e[scores={jump=1..},type=player,nbt={OnGround:1b}] run function bullet_time:jump_landed
 
@@ -47,7 +37,6 @@ execute as @e[tag=galeFlying] at @s run function bullet_time:tick_gale
 execute as @e[tag=galeReady] at @s run particle minecraft:instant_effect ^ ^ ^ 1 .1 1 0 5 force
 execute as @e[tag=galeReady] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 1 .1 1 .01 2 force
 
-#summon minecraft:area_effect_cloud ~ ~ ~ {Duration:1000s,Particle:"witch",Radius:2f,Tags:["updraftParticles"]}
 execute as @e[tag=updraftParticles] run function bullet_time:tick_updraft
 
 execute as @e[type=player,scores={traded=1..}] run scoreboard players set @s traded 0
