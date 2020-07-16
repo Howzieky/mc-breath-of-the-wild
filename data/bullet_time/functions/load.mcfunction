@@ -5,6 +5,7 @@ scoreboard objectives add my dummy
 scoreboard objectives add mz dummy
 scoreboard objectives add arrowDamage dummy
 scoreboard objectives add creeperFuse dummy
+scoreboard objectives add health dummy
 scoreboard objectives add timers dummy
 scoreboard objectives add iceTimer dummy
 
@@ -29,6 +30,7 @@ scoreboard players set 2 constants 2
 scoreboard players set 3 constants 3
 scoreboard players set 4 constants 4
 scoreboard players set 5 constants 5
+scoreboard players set 10 constants 10
 
 scoreboard objectives add stamina dummy
 scoreboard players set @a stamina 50
