@@ -1,0 +1,4 @@
+scoreboard players set @s jump 0
+scoreboard players set @s sneakTime 0
+tag @s[tag=!crouching] add galeCounting
+scoreboard players set galeCounter timers 0
