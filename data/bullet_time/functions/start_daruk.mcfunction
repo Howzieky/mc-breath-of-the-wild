@@ -1,0 +1,1 @@
+function bullet_time:tick_prime_daruk

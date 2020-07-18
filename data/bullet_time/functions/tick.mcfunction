@@ -27,6 +27,9 @@ execute as @e[type=player,limit=1,tag=!crouching] if score sneakTimeOld sneakTim
 execute as @e[type=player,limit=1,tag=crouching] if score sneakTimeOld sneakTime matches 0 run function bullet_time:release_crouch
 execute store result score sneakTimeOld sneakTime run scoreboard players get @e[type=player,limit=1] sneakTime
 
+#execute as @e run attribute @s minecraft:generic.knockback_resistance base set 0
+#execute unless score galeCounter timers matches 0..4 as @e[tag=crouching,nbt={OnGround:1b}] at @s run function bullet_time:tick_prime_daruk
+
 execute if entity @e[tag=galeCounting] run scoreboard players add galeCounter timers 1
 execute if score galeCounter timers matches 5.. run tag @e[tag=galeCounting] remove galeCounting
 
