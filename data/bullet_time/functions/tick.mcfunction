@@ -30,11 +30,11 @@ execute store result score sneakTimeOld sneakTime run scoreboard players get @e[
 #execute as @e run attribute @s minecraft:generic.knockback_resistance base set 0
 #execute unless score galeCounter timers matches 0..4 as @e[tag=crouching,nbt={OnGround:1b}] at @s run function bullet_time:tick_prime_daruk
 
-execute if entity @e[tag=galeCounting] run scoreboard players add galeCounter timers 1
-execute if score galeCounter timers matches 5.. run tag @e[tag=galeCounting] remove galeCounting
+#execute if entity @e[tag=galeCounting] run scoreboard players add galeCounter timers 1
+#execute if score galeCounter timers matches 5.. run tag @e[tag=galeCounting] remove galeCounting
 
-execute if score galeCounter timers matches 0..4 as @e[tag=crouching,type=player,tag=!galeReady,nbt={OnGround:1b}] run effect give @s slowness 1000000 30 true
-execute if score galeCounter timers matches 0..4 as @e[scores={sneakTime=15..},type=player,tag=!galeReady,nbt={OnGround:1b}] run function bullet_time:prime_gale
+#execute if score galeCounter timers matches 0..4 as @e[tag=crouching,type=player,tag=!galeReady,nbt={OnGround:1b}] run effect give @s slowness 1000000 30 true
+#execute if score galeCounter timers matches 0..4 as @e[scores={sneakTime=15..},type=player,tag=!galeReady,nbt={OnGround:1b}] run function bullet_time:prime_gale
 execute as @e[tag=galeFlying] at @s run function bullet_time:tick_gale
 
 execute as @e[tag=galeReady] at @s run particle minecraft:instant_effect ^ ^ ^ 1 .1 1 0 5 force
