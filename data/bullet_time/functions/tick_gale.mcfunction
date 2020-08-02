@@ -1,6 +1,6 @@
 scoreboard players add galeFlyingCounter timers 1
 execute if score galeFlyingCounter timers matches ..30 run tp @e[tag=galeStand] ~ ~5 ~
-execute as @e[tag=revali] at @s positioned ~ ~ ~ facing entity Howzieky feet run tp @s ~ ~ ~ ~-30 ~
+execute as @e[tag=revali] at @s positioned ~ ~ ~ facing entity @p feet run tp @s ~ ~ ~ ~-30 ~
 execute if score galeFlyingCounter timers matches ..20 as @e[tag=galeStand] at @s run tp @s ~ ~ ~ ~15 ~
 execute if score galeFlyingCounter timers matches 21..30 as @e[tag=galeStand] at @s run tp @s ~ ~ ~ ~10 ~
 execute if score galeFlyingCounter timers matches 31..40 as @e[tag=galeStand] at @s run tp @s ~ ~ ~ ~5 ~

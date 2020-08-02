@@ -3,5 +3,5 @@ execute if score @s sneakTime matches ..14 as @s run scoreboard players set gale
 tag @s remove crouching
 execute as @s[tag=galeReady] run function bullet_time:start_gale
 scoreboard players set @s sneakTime 0
-say @e[tag=galeReady]
 tag @s remove galeReady
+tag @s remove darukDisabled

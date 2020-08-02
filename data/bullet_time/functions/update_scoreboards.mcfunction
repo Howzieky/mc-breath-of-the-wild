@@ -17,3 +17,5 @@ execute store result score @s zMotion run data get entity @s Motion[2] 1000
 execute store result score @s mx run data get entity @s Motion[0] 1000
 execute store result score @s my run data get entity @s Motion[1] 1000
 execute store result score @s mz run data get entity @s Motion[2] 1000
+execute store result score @s hRot run data get entity @s Rotation[0] 1000
+execute store result score @s vRot run data get entity @s Rotation[1] 1000
