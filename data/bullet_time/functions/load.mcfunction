@@ -10,6 +10,8 @@ scoreboard objectives add timers dummy
 scoreboard objectives add iceTimer dummy
 scoreboard objectives add darukTimer dummy
 scoreboard objectives add miphaTimer dummy
+scoreboard objectives add urbosaTimer dummy
+scoreboard objectives add electrocuteTimer dummy
 
 scoreboard objectives add xPos dummy
 scoreboard objectives add yPos dummy
@@ -58,5 +60,6 @@ scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
 scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add traded minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add deaths deathCount
+scoreboard objectives add damageDealt minecraft.custom:minecraft.damage_dealt
 scoreboard players set sneakTimeOld sneakTime 0
 execute unless entity @e[tag=bowDetector] run summon minecraft:villager 0 256 0 {Silent:1b,Tags:["bowDetector"],NoGravity:1b,VillagerData:{profession:nitwit,level:2,type:plains},Invulnerable:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:999999,ShowParticles:0b},{Id:11,Amplifier:0,Duration:999999,ShowParticles:0b},{Id:10,Amplifier:100,Duration:999999,ShowParticles:0b}],NoAI:1b,PersistenceRequired:1b}

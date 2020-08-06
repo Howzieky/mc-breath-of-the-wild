@@ -1,7 +1,7 @@
 effect clear @s minecraft:slowness
 effect clear @s minecraft:levitation
 tp @s @s
-execute as @e[tag=!frozen] run data merge entity @s {NoAI:0b}
+execute as @e[tag=!frozen,tag=!electrocuted] run data merge entity @s {NoAI:0b}
 tag @s remove bulletTime
 execute as @e[tag=bulletTimeSlowed,type=arrow] run data merge entity @s {NoGravity:0b}
 execute as @e[tag=bulletTimeSlowed,type=arrow] store result entity @s Motion[0] double .001 run scoreboard players get @s mx

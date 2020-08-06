@@ -9,3 +9,4 @@ team join ghostGlow @e[tag=revali]
 effect give @e[tag=revali] glowing 100 1 true
 execute at @e[tag=revali] run particle minecraft:soul_fire_flame ~ ~ ~ .6 1 .6 .01 50 force
 execute as @s run function bullet_time:start_paraglider
+tag @e[tag=freshRevaliUpdraft] remove freshRevaliUpdraft

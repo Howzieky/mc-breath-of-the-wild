@@ -4,3 +4,4 @@ execute at @e[nbt={CustomPotionEffects:[{Amplifier:102b}]}] unless entity @e[typ
 execute at @e[nbt={CustomPotionEffects:[{Amplifier:102b}]}] unless entity @e[type=player,distance=..2] run particle minecraft:flame ~ ~ ~ 0 0 0 .01 1 force
 execute at @e[nbt={CustomPotionEffects:[{Amplifier:103b}]}] unless entity @e[type=player,distance=..2] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .01 1 force
 execute at @s[nbt={CustomPotionEffects:[{Amplifier:103b}]}] unless entity @e[type=player,distance=..2] run particle minecraft:enchanted_hit ~ ~ ~ .1 .1 .1 .2 5 force
+execute at @s[nbt={CustomPotionEffects:[{Amplifier:104b}]}] unless entity @e[type=player,distance=..2] run particle minecraft:enchanted_hit ~ ~ ~ .1 .1 .1 .2 3 force

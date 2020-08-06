@@ -5,3 +5,5 @@ execute as @s[tag=galeReady] run function bullet_time:start_gale
 scoreboard players set @s sneakTime 0
 tag @s remove galeReady
 tag @s remove darukDisabled
+tag @s remove urbosaDisabled
+tag @s remove revaliDisabled
