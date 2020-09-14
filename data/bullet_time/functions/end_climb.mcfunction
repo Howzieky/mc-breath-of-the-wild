@@ -1,2 +1,2 @@
-tag @a remove climbing
-effect clear @s minecraft:levitation
+tag @s remove climbing
+effect clear @s[tag=!climbJumping] minecraft:levitation

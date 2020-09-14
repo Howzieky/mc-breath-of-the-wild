@@ -1,1 +1,2 @@
-effect give @s minecraft:levitation 1 255 true
+effect give @s minecraft:levitation 10000 255 true
+tag @a add climbing

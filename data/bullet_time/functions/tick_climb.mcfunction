@@ -1,3 +1,4 @@
+tag @s[tag=climbing] remove climbJumpEnabled
 execute if entity @s[tag=paragliding] run function bullet_time:end_paraglider
 tag @a add climbing
 scoreboard players set @s jump 0
