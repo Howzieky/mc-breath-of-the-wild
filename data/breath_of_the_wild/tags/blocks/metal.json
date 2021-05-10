@@ -1,0 +1,23 @@
+{
+ "values": [
+  "#minecraft:rails",
+  "#minecraft:anvil",
+  "minecraft:blast_furnace",
+  "minecraft:iron_block",
+  "minecraft:cauldron",
+  "minecraft:cauldron",
+  "minecraft:chain",
+  "minecraft:heavy_weighted_pressure_plate",
+  "minecraft:light_weighted_pressure_plate",
+  "minecraft:hopper",
+  "minecraft:iron_trapdoor",
+  "minecraft:iron_bars",
+  "minecraft:piston",
+  "minecraft:sticky_piston",
+  "minecraft:smithing_table",
+  "minecraft:stonecutter",
+  "minecraft:tripwire_hook",
+  "minecraft:gold_block",
+  "minecraft:netherite_block"
+ ]
+}

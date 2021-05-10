@@ -1,0 +1,12 @@
+scoreboard players reset @e[tag=selectedMagnesisEntity]
+tag @s remove draggingMagnesis
+tag @e remove selectedMagnesisEntity
+
+#kill @e[tag=magnesisBlockSeparator]
+#tp @e[type=spider,tag=magnesisBlockCarrier] ~ -100 ~
+kill @e[tag=magnesisBlockCarrier]
+#execute as @e[tag=selectedMagnesisEntity,type=minecraft:falling_block] run tp @s ~ ~ ~
+#execute as @e[tag=cryonisBlock] at @s positioned ~-1 ~-1 ~-1 if entity @e[tag=raytrace,dx=2,dy=3,dz=2] at @s run function breath_of_the_wild:break_cryonis
+#execute as @e[tag=raytrace,tag=!justBrokeCyronis] at @s if block ~-1 ~1 ~-1 water if block ~-1 ~1 ~ water if block ~-1 ~1 ~1 water if block ~ ~1 ~-1 water if block ~ ~1 ~ water if block ~ ~1 ~1 water if block ~1 ~1 ~-1 water if block ~1 ~1 ~ water if block ~1 ~1 ~1 water positioned ~-1 ~1 ~-1 unless entity @e[dx=2,dy=3,dz=2,tag=!raytrace,tag=!cryonisCube,tag=!bigCryonisCube] positioned ~1 ~-1 ~1 run function breath_of_the_wild:create_cryonis
+#execute if entity @s[tag=failed] at @e[tag=raytrace] run particle block ice ~ ~2 ~ 1 2 1 0 500
+#tag @e[tag=raytrace] remove justBrokeCyronis
