@@ -1,8 +1,9 @@
 tag @s[tag=draggingMagnesis] add wasDraggingMagnesis
-execute if entity @s[tag=draggingMagnesis] at @e[tag=selectedMagnesisEntity] run function breath_of_the_wild:runes/magnesis/rc_deselect
-execute if entity @s[tag=!wasDraggingMagnesis] if entity @e[tag=selectedMagnesisEntity] run function breath_of_the_wild:runes/magnesis/rc_select
+execute if entity @s[tag=draggingMagnesis] run function breath_of_the_wild:runes/magnesis/rc_deselect
+execute if entity @s[tag=!wasDraggingMagnesis] run function breath_of_the_wild:runes/magnesis/rc_select
 #say @s[tag=!wasDraggingMagnesis] @e[tag=magnesisBlockSelector]
-execute if entity @s[tag=!wasDraggingMagnesis] at @e[tag=raytrace] if block ~ ~ ~ #breath_of_the_wild:metal run function breath_of_the_wild:runes/magnesis/rc_select_block
+
+
 
 #tag @e[tag=selectedMagnesisEntity,limit=1] add drawTarget
 execute at @e[tag=selectedMagnesisEntity,limit=1] run particle dust 1.0 0.0 0.0 1.0 ~ ~1 ~ 1 1 1 0 1000

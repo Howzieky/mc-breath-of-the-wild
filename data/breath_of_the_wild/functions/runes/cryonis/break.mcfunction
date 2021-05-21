@@ -3,5 +3,4 @@ execute as @e if score @s cryonisList < @e[tag=doomed,limit=1] cryonisList run s
 fill ~-1 ~ ~-1 ~1 ~ ~1 water replace ice
 fill ~-1 ~1 ~-1 ~1 ~3 ~1 air destroy
 kill @s
-tag @e[tag=raytrace] add justBrokeCyronis
-execute as @e[tag=raytrace] run function breath_of_the_wild:runes/cryonis/look_at/ice/end
+tag @p[tag=link] remove lookingAtCryonis

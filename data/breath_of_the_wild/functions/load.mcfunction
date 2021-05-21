@@ -1,5 +1,8 @@
+function breath_of_the_wild:tools/random/load
+
 setworldspawn 0 0 0
 forceload add 10000 10000
+forceload add 0 0
 
 scoreboard objectives add mx dummy
 scoreboard objectives add my dummy
@@ -13,8 +16,10 @@ scoreboard objectives add darukTimer dummy
 scoreboard objectives add miphaTimer dummy
 scoreboard objectives add urbosaTimer dummy
 scoreboard objectives add electrocuteTimer dummy
+scoreboard objectives add updraftTimer dummy
 scoreboard objectives add selectedRune dummy
 scoreboard objectives add cryonisList dummy
+scoreboard objectives add lightningVars dummy
 
 scoreboard objectives add xPos dummy
 scoreboard objectives add yPos dummy
@@ -31,6 +36,12 @@ scoreboard objectives add zMotion dummy
 scoreboard objectives add hRot dummy
 scoreboard objectives add vRot dummy
 
+scoreboard objectives add random dummy
+scoreboard players set min random 0
+scoreboard players set max random 10
+scoreboard players set range random 10
+scoreboard players set output random 0
+
 scoreboard objectives add constants dummy
 scoreboard players set -1 constants -1
 scoreboard players set 0 constants 0
@@ -40,6 +51,9 @@ scoreboard players set 3 constants 3
 scoreboard players set 4 constants 4
 scoreboard players set 5 constants 5
 scoreboard players set 10 constants 10
+scoreboard players set 20 constants 20
+scoreboard players set 50 constants 50
+scoreboard players set 100 constants 100
 
 scoreboard objectives add stamina dummy
 scoreboard players set @a stamina 200
@@ -69,9 +83,15 @@ team modify magnesisGeneral color red
 team add magnesisSpecific
 team modify magnesisSpecific color yellow
 
+team add stasisGeneral
+team modify stasisGeneral color yellow
+
+team add stasisSpecific
+team modify stasisSpecific color green
+
 #data modify storage breath_of_the_wild tempEntity set value {}
 #data modify storage breath_of_the_wild
-data merge storage breath_of_the_wild {tempEntity:{}}
+data merge storage breath_of_the_wild {tempEntity:{},linkData:{},stasisEntity:{}}
 
 scoreboard players set linkCount timers 0
 execute as @e[tag=link] run scoreboard players add linkCount timers 1

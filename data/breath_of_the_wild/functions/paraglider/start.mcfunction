@@ -4,3 +4,5 @@ tag @s add paragliding
 tag @s remove galeCounting
 scoreboard players set @s jump 0
 attribute @s minecraft:generic.knockback_resistance base set 1000
+
+#summon slime ~ ~-3 ~ {Invulnerable:1b,NoAI:1b,Pos:[0.0d,0.0d,0.0d],Size:0,ActiveEffects:[],Tags:["paragliderSlime"]}

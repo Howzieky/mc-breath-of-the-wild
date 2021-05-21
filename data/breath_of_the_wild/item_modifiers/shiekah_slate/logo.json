@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "Right click to select rune",
+      "color": "aqua",
+      "bold": true,
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{\"CustomModelData\":2}"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "Magnesis",
+      "color": "red",
+      "bold": true,
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{\"CustomModelData\":8}"
+  }
+]

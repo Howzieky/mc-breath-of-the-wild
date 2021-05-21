@@ -1,7 +1,7 @@
 tag @s add selectingRune
 
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Marker:1b,Invisible:1b,Tags:["runeLock"]}
-effect give @s[nbt={OnGround:0b}] minecraft:levitation 1000000 255 true
+effect give @s[predicate=!breath_of_the_wild:on_ground] minecraft:levitation 1000000 255 true
 #effect give @s minecraft:slowness 1000000 6 true
 #effect give @s minecraft:jump_boost 1000000 128 true
 

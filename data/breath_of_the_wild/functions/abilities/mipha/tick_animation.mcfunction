@@ -7,6 +7,6 @@ execute at @a run particle minecraft:bubble_pop ~ ~1 ~ .5 .5 .5 0 2 force
 execute at @a run particle minecraft:soul_fire_flame ~ ~1 ~ .5 .5 .5 .02 1 force
 execute as @a at @s run playsound minecraft:block.bubble_column.bubble_pop ambient @s ~ ~ ~
 execute if score @s miphaTimer matches 50 run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .3 100 force
-execute if score @s miphaTimer matches 50 run kill @s
 execute if score @s miphaTimer matches 50 run kill @e[tag=miphaStand]
+execute if score @s miphaTimer matches 50 run kill @s
 scoreboard players add @s miphaTimer 1

@@ -1,0 +1,2 @@
+execute unless entity @e[tag=selectedMagnesisEntity] align xyz positioned ~.5 ~ ~.5 if block ~ ~ ~ #breath_of_the_wild:metal unless entity @e[tag=magnesisBlockSelector,distance=...1] run summon minecraft:falling_block ~ ~ ~ {Time:597,DropItem:0b,BlockState:{Name:"minecraft:yellow_stained_glass"},NoGravity:1b,Glowing:1b,Tags:["magnesisBlockSelector"],NoAI:1b}
+team join magnesisSpecific @e[tag=magnesisBlockSelector]

@@ -9,16 +9,19 @@
 #Some timers count up. Some count down. Make it consistent
 #IMPOSSIBLE ###Fix the bossbar so that it shows the correct bar to each player. Right now it directly references "Howzieky"
 
-execute as @e[type=arrow] at @s run function breath_of_the_wild:arrows/tick
+
+#say NEW TICK
+execute as @a[tag=link] at @s run function breath_of_the_wild:loop
+
+execute as @e[type=arrow] at @s run function breath_of_the_wild:arrows/tick/all_arrows
 
 execute as @e[tag=daruk] at @s run function breath_of_the_wild:abilities/daruk/tick_animation
 execute as @e[tag=mipha] at @s run function breath_of_the_wild:abilities/mipha/tick_animation
 execute as @e[tag=urbosa] at @s run function breath_of_the_wild:abilities/urbosa/tick_animation
 
-execute as @a[tag=link] at @s run function breath_of_the_wild:loop
 
 
 execute unless entity @e[tag=updraftParticles] run tag @e remove inUpdraft
-execute as @e[tag=updraftParticles] run function breath_of_the_wild:effects/tick_updraft
+execute as @e[tag=updraftParticles] run function breath_of_the_wild:effects/updraft/tick
 
 tag @e[tag=!old] add old

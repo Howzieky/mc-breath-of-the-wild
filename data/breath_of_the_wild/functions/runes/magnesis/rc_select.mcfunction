@@ -1,7 +1,4 @@
-execute as @e[tag=!selectedMagnesisEntity,type=#breath_of_the_wild:metal_entities] run data merge entity @s {Glowing:0b}
-tag @s add draggingMagnesis
-
-#execute as @e[tag=cryonisBlock] at @s positioned ~-1 ~-1 ~-1 if entity @e[tag=raytrace,dx=2,dy=3,dz=2] at @s run function breath_of_the_wild:break_cryonis
-#execute as @e[tag=raytrace,tag=!justBrokeCyronis] at @s if block ~-1 ~1 ~-1 water if block ~-1 ~1 ~ water if block ~-1 ~1 ~1 water if block ~ ~1 ~-1 water if block ~ ~1 ~ water if block ~ ~1 ~1 water if block ~1 ~1 ~-1 water if block ~1 ~1 ~ water if block ~1 ~1 ~1 water positioned ~-1 ~1 ~-1 unless entity @e[dx=2,dy=3,dz=2,tag=!raytrace,tag=!cryonisCube,tag=!bigCryonisCube] positioned ~1 ~-1 ~1 run function breath_of_the_wild:create_cryonis
-#execute if entity @s[tag=failed] at @e[tag=raytrace] run particle block ice ~ ~2 ~ 1 2 1 0 500
-#tag @e[tag=raytrace] remove justBrokeCyronis
+execute if entity @e[tag=selectedMagnesisEntity] run function breath_of_the_wild:runes/magnesis/rc_select_entity
+execute at @e[tag=magnesisBlockSelector] if block ~ ~ ~ #breath_of_the_wild:metal run function breath_of_the_wild:runes/magnesis/rc_select_block
+execute if entity @s[tag=draggingMagnesis] run summon minecraft:marker ~ ~ ~ {Tags:["magnesisTarget"]}
+execute if entity @s[tag=draggingMagnesis] run function breath_of_the_wild:runes/magnesis/replace_hotbar

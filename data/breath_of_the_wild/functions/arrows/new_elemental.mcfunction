@@ -1,4 +1,5 @@
-execute if entity @a[tag=link,tag=bulletTime] run function breath_of_the_wild:arrows/slow_down
+execute if entity @p[tag=link,tag=bulletTime] run function breath_of_the_wild:arrows/slow_down
+execute if entity @p[tag=link,tag=climbing] run function breath_of_the_wild:arrows/slow_down
 
 data merge entity @s {Color:-1s,crit:0b,damage:0.0d}
 
