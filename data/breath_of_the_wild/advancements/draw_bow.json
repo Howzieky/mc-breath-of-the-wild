@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone"
+    },
+    "title": "",
+    "description": "",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:bow"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "breath_of_the_wild:event_handlers/draw_bow"
+  }
+}

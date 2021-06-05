@@ -1,9 +1,9 @@
 effect give @s levitation 1 254 true
 effect give @s slowness 1 2 true
 
-execute as @e[tag=bulletTimeSlowed] store result entity @s Motion[0] double .001 run scoreboard players get @s mx
-execute as @e[tag=bulletTimeSlowed] store result entity @s Motion[1] double .001 run scoreboard players get @s my
-execute as @e[tag=bulletTimeSlowed] store result entity @s Motion[2] double .001 run scoreboard players get @s mz
+execute as @e[tag=bulletTimeSlowed,tag=!stasisTarget] store result entity @s Motion[0] double .001 run scoreboard players get @s mx
+execute as @e[tag=bulletTimeSlowed,tag=!stasisTarget] store result entity @s Motion[1] double .001 run scoreboard players get @s my
+execute as @e[tag=bulletTimeSlowed,tag=!stasisTarget] store result entity @s Motion[2] double .001 run scoreboard players get @s mz
 
 execute at @s run particle minecraft:end_rod ~ ~ ~ 5 5 5 0 3 force
 

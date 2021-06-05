@@ -1,6 +1,9 @@
-tag @s remove liveSquareBomb
-execute at @e[tag=square_bomb_back] run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .4 700 force
-execute at @e[tag=square_bomb_back] run summon creeper ~ ~ ~ {Invulnerable:1b,Fuse:0s,ignited:1b}
-kill @e[tag=square_bomb]
+particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 .4 700 force
+summon creeper ~ ~ ~ {Invulnerable:1b,Fuse:0s,ignited:1b,Silent:1b}
 
-item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/square_bomb
+execute as @e[tag=stasisDirectionHandler,distance=..7] at @s facing entity @e[tag=square_bomb_back] eyes facing ^ ^ ^-1 run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=stasisDirectionHandler,distance=..7] run tag @s add forceDirection
+
+function breath_of_the_wild:runes/square_bomb/delete
+
+execute as @e[distance=..10,scores={iceTimer=1..}] at @s run function breath_of_the_wild:effects/ice/end

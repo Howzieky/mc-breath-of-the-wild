@@ -1,8 +1,11 @@
-#execute as @e[type=!player] run function breath_of_the_wild:runes/stasis/holding_cs/tick_entity
-execute as @e[tag=stasisTarget,predicate=!breath_of_the_wild:stationary] run say hello
-execute as @e[tag=stasisTarget] run data merge entity @s {Motion:[0.0d,0.0d,0.0d]}
-#team join stasisGeneral @e[type=#breath_of_the_wild:stasis_capable]
-#tag @e remove stasisTarget
-#execute rotated as @s anchored eyes run function breath_of_the_wild:runes/stasis/raytrace
-#team join stasisSpecific @e[tag=stasisTarget]
-#say test
+
+
+#execute if score 20thTick variables matches 0 run playsound minecraft:entity.zombie.attack_iron_door player @a ~ ~ ~ 1 2 .1
+
+
+
+data merge entity @s {Fire:0s,Health:1024.0f,Motion:[0.0d,0.0d,0.0d],power:[0.0d,0.0d,0.0d]}
+execute if entity @s[type=#breath_of_the_wild:needs_slime] as @e[tag=dummyStasisSlime] run data merge entity @s {Fire:0s,Health:1024.0f,Motion:[0.0d,0.0d,0.0d]}
+
+scoreboard players remove stasisRemainingTime variables 1
+execute if score stasisRemainingTime variables matches ..0 run function breath_of_the_wild:runes/stasis/release

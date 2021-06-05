@@ -4,7 +4,7 @@ execute as @s at @s run particle minecraft:cloud ^ ^1 ^1 0 1.25 0 1 0 force
 
 tag @e[tag=inUpdraft] add wasInUpdraft
 tag @e[tag=!newInUpdraft] remove inUpdraft
-execute at @s positioned ~-2 ~ ~-2 as @e[dx=3,dy=20,dz=3,type=!zombie,type=!creeper,type=!skeleton] run tag @s add newInUpdraft
+execute at @s positioned ~-2 ~ ~-2 as @e[dx=3,dy=20,dz=3,type=!zombie,type=!creeper,type=!skeleton,tag=!stasisTarget] run tag @s add newInUpdraft
 tag @e[tag=newInUpdraft] add inUpdraft
 execute at @s positioned ~-2 ~ ~-2 as @e[dx=3,dy=20,dz=3,tag=paragliding] run effect give @s levitation 1 30 true
 execute as @e[tag=inUpdraft] run function breath_of_the_wild:tools/nbt_to_temp_entity

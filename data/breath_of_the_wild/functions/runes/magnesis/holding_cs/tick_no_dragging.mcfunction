@@ -19,7 +19,7 @@ execute rotated as @s anchored eyes run function breath_of_the_wild:runes/magnes
 
 
 ##execute at @e[tag=raytrace] unless entity @e[tag=selectedMagnesisEntity] align xyz positioned ~.5 ~ ~.5 if block ~ ~ ~ #breath_of_the_wild:metal run tp @e[tag=magnesisFallingBlock,nbt={Time:51}] ~ ~ ~
-##tag @e[tag=magnesisFallingBlock,tag=old] add secondTick
+##tag @e[tag=magnesisFallingBlock,tag=old] add 2ndTick
 #execute at @e[tag=raytrace] unless entity @e[tag=selectedMagnesisEntity] align xyz positioned ~.5 ~ ~.5 if block ~ ~ ~ #breath_of_the_wild:metal unless entity @e[tag=magnesisBlockSelector,distance=...1] run summon minecraft:falling_block ~ ~ ~ {Time:597,DropItem:0b,BlockState:{Name:"minecraft:yellow_stained_glass"},NoGravity:1b,Glowing:1b,Tags:["magnesisBlockSelector"],NoAI:1b}
 #team join magnesisSpecific @e[tag=magnesisBlockSelector]
 ##tag @e[tag=magnesisBlockSelector] add selectedMagnesisEntity

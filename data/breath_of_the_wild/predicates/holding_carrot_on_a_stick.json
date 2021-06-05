@@ -2,6 +2,12 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{SelectedItem:{id:\"minecraft:carrot_on_a_stick\"}}"
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:carrot_on_a_stick"
+        ]
+      }
+    }
   }
 }

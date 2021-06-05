@@ -25,6 +25,7 @@ scoreboard players operation @s mz = @s zMotion
 execute store result score @s hRot run data get storage minecraft:breath_of_the_wild linkData.Rotation[0] 1000
 execute store result score @s vRot run data get storage minecraft:breath_of_the_wild linkData.Rotation[1] 1000
 
+#tellraw Howzieky ["yVel: ",{"score":{"objective":"yVel","name":"@s"}},", Motion[1]: ",{"score":{"objective":"yMotion","name":"@s"}}]
 #execute store result score @s xPos run data get entity @s Pos[0] 1000
 #execute store result score @s yPos run data get entity @s Pos[1] 1000
 #execute store result score @s zPos run data get entity @s Pos[2] 1000

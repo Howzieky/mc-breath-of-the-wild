@@ -12,6 +12,20 @@
  "minecraft:skeleton",
  "minecraft:zombie",
  "minecraft:spider",
- "minecraft:arrow"
+ "minecraft:arrow",
+ "minecraft:item",
+ "minecraft:villager",
+ "minecraft:horse",
+ "minecraft:slime",
+ "minecraft:wither_skeleton",
+ "minecraft:wither",
+ "minecraft:falling_block",
+ "minecraft:bee",
+ "minecraft:egg",
+ "minecraft:snowball",
+ "minecraft:potion",
+ "minecraft:ender_pearl",
+ "minecraft:ghast",
+ "minecraft:fireball"
  ]
 }

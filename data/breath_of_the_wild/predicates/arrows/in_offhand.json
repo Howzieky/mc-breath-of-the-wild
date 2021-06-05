@@ -2,6 +2,10 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Motion:[0.0d,0.0d,0.0d]}"
+    "equipment": {
+      "offhand": {
+        "tag": "minecraft:arrows"
+      }
+    }
   }
 }

@@ -1,5 +1,9 @@
 execute if predicate breath_of_the_wild:arrows/hit/elemental store result score @s health run data get entity @s Health
 execute if predicate breath_of_the_wild:arrows/hit/elemental run scoreboard players operation @s health -= 10 constants
+execute if predicate breath_of_the_wild:arrows/hit/bomb run scoreboard players operation @s health -= 10 constants
+
+
+#execute if entity @s[type=!#minecraft:arrows,tag=frozen,tag=!stasisTarget] run function breath_of_the_wild:effects/ice/end
 
 execute if predicate breath_of_the_wild:arrows/hit/ice run function breath_of_the_wild:arrows/hit/ice
 execute if predicate breath_of_the_wild:arrows/hit/flame run function breath_of_the_wild:arrows/hit/flame

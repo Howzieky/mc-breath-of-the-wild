@@ -9,6 +9,24 @@
 #Some timers count up. Some count down. Make it consistent
 #IMPOSSIBLE ###Fix the bossbar so that it shows the correct bar to each player. Right now it directly references "Howzieky"
 
+scoreboard players add 480thTick variables 1
+scoreboard players operation 480thTick variables %= 480 constants
+scoreboard players operation 20thTick variables = 480thTick variables
+scoreboard players operation 20thTick variables %= 20 constants
+scoreboard players operation 16thTick variables = 480thTick variables
+scoreboard players operation 16thTick variables %= 16 constants
+scoreboard players operation 10thTick variables = 480thTick variables
+scoreboard players operation 10thTick variables %= 10 constants
+scoreboard players operation 8thTick variables = 480thTick variables
+scoreboard players operation 8thTick variables %= 8 constants
+scoreboard players operation 5thTick variables = 480thTick variables
+scoreboard players operation 5thTick variables %= 5 constants
+scoreboard players operation 4thTick variables = 480thTick variables
+scoreboard players operation 4thTick variables %= 4 constants
+scoreboard players operation 3rdTick variables = 480thTick variables
+scoreboard players operation 3rdTick variables %= 3 constants
+scoreboard players operation 2ndTick variables = 480thTick variables
+scoreboard players operation 2ndTick variables %= 2 constants
 
 #say NEW TICK
 execute as @a[tag=link] at @s run function breath_of_the_wild:loop
@@ -19,7 +37,10 @@ execute as @e[tag=daruk] at @s run function breath_of_the_wild:abilities/daruk/t
 execute as @e[tag=mipha] at @s run function breath_of_the_wild:abilities/mipha/tick_animation
 execute as @e[tag=urbosa] at @s run function breath_of_the_wild:abilities/urbosa/tick_animation
 
+execute as @e[scores={iceTimer=0..}] at @s run function breath_of_the_wild:effects/ice/tick
+execute as @e[tag=electrocuted] at @s run function breath_of_the_wild:effects/electrocute/tick
 
+execute if score cryonisTimer timers matches 1.. run function breath_of_the_wild:runes/cryonis/tick_creation
 
 execute unless entity @e[tag=updraftParticles] run tag @e remove inUpdraft
 execute as @e[tag=updraftParticles] run function breath_of_the_wild:effects/updraft/tick

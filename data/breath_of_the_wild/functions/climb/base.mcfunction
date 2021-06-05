@@ -1,5 +1,5 @@
 #execute if entity @s[tag=!staminaExhausted,tag=!climbJumping] if block ~ ~-1 ~ #breath_of_the_wild:intangible if block ^ ^ ^.31 #breath_of_the_wild:intangible unless block ^ ^ ^.4 #breath_of_the_wild:intangible run function breath_of_the_wild:climb/tick_stopped
-execute if block ~ ~-1 ~ #breath_of_the_wild:intangible run tag @s add canClimb
+execute if block ~ ~-1 ~ #breath_of_the_wild:intangible if block ~ ~ ~ #breath_of_the_wild:intangible run tag @s add canClimb
 tag @s[tag=climbing] add canClimb
 execute if entity @s[tag=!staminaExhausted,tag=!climbJumping,tag=canClimb] unless block ^ ^ ^.33 #breath_of_the_wild:intangible run function breath_of_the_wild:climb/tick
 tag @s remove canClimb
@@ -9,3 +9,4 @@ execute if entity @s[tag=climbing,tag=!climbJumpEnabled] positioned ^ ^ ^.43 if 
 execute if entity @s[tag=climbing,tag=staminaExhausted] run function breath_of_the_wild:climb/end
 #execute if entity @s[tag=climbing] unless entity @e[tag=climbJumpMovementCheck] run summon minecraft:armor_stand ~ ~ ~ {Tags:["climbJumpMovementCheck"],Marker:1b,Invisible:1b}
 #execute unless entity @s[tag=climbing] if entity @e[tag=climbJumpMovementCheck] run kill @e[tag=climbJumpMovementCheck]
+#execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~.2 ~ run particle dust 1.0 1.0 1.0 0.2 ~ ~ ~ .5 0 .5 0 100
