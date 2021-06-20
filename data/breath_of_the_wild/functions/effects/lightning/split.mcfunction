@@ -13,7 +13,7 @@ execute if score #out LCG.main matches 21..30 if block ~ ~ ~ air rotated ~-36 ~1
 execute if score #out LCG.main matches 31..40 if block ~ ~ ~ air rotated ~ ~ run function breath_of_the_wild:effects/lightning/start_2
 execute if score #out LCG.main matches 41..50 if block ~ ~ ~ air rotated ~19 ~-10 run function breath_of_the_wild:effects/lightning/start_2
 
-scoreboard players set #modulus LCG.main 500
+scoreboard players set #modulus LCG.main 200
 function breath_of_the_wild:tools/random/random
 #execute if score #out LCG.main matches 1..10 rotated ~ ~ run function breath_of_the_wild:effects/lightning/start_2
 #execute if score #out LCG.main matches 11..20 rotated ~26 ~41 run function breath_of_the_wild:effects/lightning/start_2

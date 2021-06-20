@@ -4,9 +4,6 @@ setworldspawn 0 0 0
 forceload add 10000 10000
 forceload add 0 0
 
-scoreboard objectives add mx dummy
-scoreboard objectives add my dummy
-scoreboard objectives add mz dummy
 scoreboard objectives add arrowDamage dummy
 scoreboard objectives add creeperFuse dummy
 scoreboard objectives add health dummy
@@ -25,12 +22,6 @@ scoreboard objectives add stasisDamage dummy
 scoreboard objectives add xPos dummy
 scoreboard objectives add yPos dummy
 scoreboard objectives add zPos dummy
-scoreboard objectives add xPosOld dummy
-scoreboard objectives add yPosOld dummy
-scoreboard objectives add zPosOld dummy
-scoreboard objectives add xVel dummy
-scoreboard objectives add yVel dummy
-scoreboard objectives add zVel dummy
 scoreboard objectives add xMotion dummy
 scoreboard objectives add yMotion dummy
 scoreboard objectives add zMotion dummy
@@ -55,6 +46,7 @@ scoreboard players set 3rdTick variables 0
 scoreboard players set 2ndTick variables 0
 scoreboard players set stasisMathTime variables 0
 scoreboard players set stasisRemainingTime variables 0
+scoreboard players set raytraceSteps variables 0
 
 scoreboard objectives add mass dummy
 scoreboard players set tiny mass 1
@@ -121,14 +113,14 @@ team modify stasisSpecific color green
 
 #data modify storage breath_of_the_wild tempEntity set value {}
 #data modify storage breath_of_the_wild
-data merge storage breath_of_the_wild {tempEntity:{},linkData:{},stasisEntity:{},arrowInventoryCheck:{},arrowInventoryCheckCopy:{},arrowNotFound:0}
+data merge storage breath_of_the_wild {flags:{linkDataFresh:0b,darukAnimating:0b,miphaAnimating:0b,revaliAnimating:0b,urbosaAnimating:0b},tempEntity:{},linkData:{},stasisEntity:{},arrowInventoryCheck:{},arrowInventoryCheckCopy:{},arrowNotFound:0}
 
-scoreboard players set linkCount timers 0
-execute as @e[tag=link] run scoreboard players add linkCount timers 1
-execute if score linkCount timers matches 2.. run tellraw @a [{"bold":"true","color":"red","text":"Too many Link players found. Expected: 0-1, Got: "},{"bold":"true","color":"red","score":{"name":"linkCount","objective":"timers"}},{"bold":"true","color":"red","text":". Removing all Link players."}]
-execute if score linkCount timers matches 2.. run tag @e remove link
-execute if score linkCount timers matches 2.. run scoreboard players set linkCount timers 0
-execute if score linkCount timers matches 0 run tellraw @a [{"color":"red","text":"No Link player found. "},{"bold":"true","color":"green","text":"Click here to play as Link!","clickEvent":{"action":"run_command","value":"/function breath_of_the_wild:setup/add_link"}}]
+scoreboard players set linkCount variables 0
+execute as @a[tag=link] run scoreboard players add linkCount variables 1
+execute if score linkCount variables matches 2.. run tellraw @a [{"bold":true,"color":"red","text":"Too many Link players found. Expected: 0-1, Got: "},{"bold":true,"color":"red","score":{"name":"linkCount","objective":"variables"}},{"bold":true,"color":"red","text":". Removing all Link players."}]
+execute if score linkCount variables matches 2.. run tag @a remove link
+execute if score linkCount variables matches 2.. run scoreboard players set linkCount variables 0
+execute if score linkCount variables matches 0 run tellraw @a [{"color":"red","text":"No Link player found. "},{"bold":true,"color":"green","text":"Click here to play as Link!","clickEvent":{"action":"run_command","value":"/function breath_of_the_wild:setup/add_link"}}]
 
 scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
 scoreboard objectives add jump minecraft.custom:minecraft.jump

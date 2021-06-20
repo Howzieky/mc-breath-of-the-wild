@@ -3,3 +3,4 @@ effect give @s minecraft:levitation 10000 255 true
 tag @s add climbing
 scoreboard players set @s jump 0
 summon minecraft:armor_stand ~ ~ ~ {Tags:["climbJumpMovementCheck"],Marker:1b,Invisible:1b}
+tp @s @s

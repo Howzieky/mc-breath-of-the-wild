@@ -1,4 +1,6 @@
 execute if predicate breath_of_the_wild:just_hurt run function breath_of_the_wild:runes/stasis/hit_stasis_entity
+scoreboard players operation 3rdTick variables = 480thTick variables
+scoreboard players operation 3rdTick variables %= 3 constants
 execute if score 3rdTick variables matches 0 run function breath_of_the_wild:runes/stasis/arrow/start_draw
 
 scoreboard players operation stasisMathTime variables = stasisRemainingTime variables

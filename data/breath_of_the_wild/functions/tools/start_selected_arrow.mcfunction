@@ -1,3 +1,4 @@
+function breath_of_the_wild:tools/nbt_to_link_data_if_stale
 data modify storage minecraft:breath_of_the_wild arrowInventoryCheck set from storage minecraft:breath_of_the_wild linkData.Inventory
 scoreboard players set arrowNotFound variables 0
 

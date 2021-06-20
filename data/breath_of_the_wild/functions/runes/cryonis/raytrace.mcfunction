@@ -5,7 +5,8 @@
 #execute unless entity @s[tag=continuingRaytrace] unless entity @e[tag=selectedMagnesisEntity] if block ~ ~ ~ #breath_of_the_wild:metal run function breath_of_the_wild:runes/magnesis/holding_cs/hit_metal_block
 #particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 0 1 force
 tag @s remove continuingRaytrace
-execute if block ~ ~ ~ air if entity @s[distance=..70] run tag @s add continuingRaytrace
+scoreboard players add raytraceSteps variables 1
+execute if block ~ ~ ~ air if score raytraceSteps variables matches 0..280 run tag @s add continuingRaytrace
 execute if entity @s[tag=!continuingRaytrace] run function breath_of_the_wild:runes/cryonis/end_raytrace
 execute if entity @s[tag=continuingRaytrace] positioned ^ ^ ^.25 run function breath_of_the_wild:runes/cryonis/raytrace
 

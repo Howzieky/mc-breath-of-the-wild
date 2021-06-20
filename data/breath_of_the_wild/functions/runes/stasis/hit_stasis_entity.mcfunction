@@ -13,4 +13,6 @@ execute store result score healthReader stasisDamage run data get entity @s Heal
 scoreboard players operation @s stasisDamage -= healthReader stasisDamage
 execute if score @s stasisDamage matches 21.. run scoreboard players set @s stasisDamage 20
 
+data merge entity @s {Health:1024.0f}
+
 function breath_of_the_wild:runes/stasis/set_color

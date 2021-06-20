@@ -7,3 +7,5 @@ execute as @e[tag=stasisDirectionHandler,distance=..7] run tag @s add forceDirec
 function breath_of_the_wild:runes/round_bomb/delete
 
 execute as @e[distance=..10,scores={iceTimer=1..}] at @s run function breath_of_the_wild:effects/ice/end
+
+execute positioned ~ ~-2 ~ as @e[type=marker,tag=cryonisBlock,distance=..7] at @s run function breath_of_the_wild:runes/cryonis/break

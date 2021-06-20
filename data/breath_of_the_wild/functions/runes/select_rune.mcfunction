@@ -7,8 +7,8 @@ execute if entity @s[tag=liveRoundBomb] if entity @e[tag=selectedRune,tag=rBomb]
 execute if entity @s[tag=!liveSquareBomb] if entity @e[tag=selectedRune,tag=sBomb] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/square_bomb
 execute if entity @s[tag=liveSquareBomb] if entity @e[tag=selectedRune,tag=sBomb] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/square_bomb_live
 execute if entity @e[tag=selectedRune,tag=magnesis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/magnesis
-execute if entity @s[tag=!liveSquareBomb] if entity @e[tag=selectedRune,tag=stasis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/stasis
-execute if entity @s[tag=liveSquareBomb] if entity @e[tag=selectedRune,tag=stasis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/stasis_live
+execute if entity @s[tag=!liveStasis] if entity @e[tag=selectedRune,tag=stasis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/stasis
+execute if entity @s[tag=liveStasis] if entity @e[tag=selectedRune,tag=stasis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/stasis_live
 execute if entity @e[tag=selectedRune,tag=cryonis] run item modify entity @s hotbar.6 breath_of_the_wild:shiekah_slate/cryonis
 #execute if entity @e[tag=selectedRune,tag=rBomb] run item replace entity @s hotbar.6 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Round Bomb","color":"dark_aqua","italic":"false","bold":"true"}'}}
 #execute if entity @e[tag=selectedRune,tag=sBomb] run item replace entity @s hotbar.6 with minecraft:carrot_on_a_stick{display:{Name:'{"text":"Square Bomb","color":"dark_aqua","italic":"false","bold":"true"}'}}

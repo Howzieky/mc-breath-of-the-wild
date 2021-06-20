@@ -1,4 +1,8 @@
 execute as @e[tag=selectedMagnesisEntity] run function breath_of_the_wild:runes/magnesis/calculate_movement
+#execute at @e[tag=selectedMagnesisEntity,limit=1] run tp @e[tag=magnesisBlockCarrier] ~ ~.1 ~ ~ ~
+#say @e[tag=magnesisBlockCarrier] to @e[tag=selectedMagnesisEntity,limit=1]
+#execute as @e store result entity @s Air short 1 if entity @s[nbt={Air:0s}]
+#data merge entity @e[tag=magnesisFallingBlock,limit=1] {Air:1s}
 
 execute at @s[predicate=breath_of_the_wild:selected_item_slot/0] run tp @e[tag=magnesisTarget] ^ ^ ^3
 execute at @s[predicate=breath_of_the_wild:selected_item_slot/1] run tp @e[tag=magnesisTarget] ^ ^ ^6
@@ -13,3 +17,5 @@ execute at @s[predicate=breath_of_the_wild:selected_item_slot/8] run tp @e[tag=m
 execute at @e[tag=magnesisTarget] run particle dust 1.0 0.0 0.0 1.0 ~ ~ ~ .2 .2 .2 0 10
 execute at @e[tag=magnesisTarget] run function breath_of_the_wild:runes/magnesis/draw_line_to_ground
 execute at @e[tag=magnesisTarget] anchored feet as @e[tag=selectedMagnesisEntity] facing entity @s feet run function breath_of_the_wild:tools/draw_line_to_target
+execute at @e[tag=magnesisTarget] anchored feet as @e[tag=magnesisBlockCarrier] facing entity @s feet run function breath_of_the_wild:tools/draw_line_to_target
+

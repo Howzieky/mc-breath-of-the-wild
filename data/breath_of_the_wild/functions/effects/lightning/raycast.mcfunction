@@ -5,7 +5,7 @@ scoreboard players remove tempLength lightningVars 1
 particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1 force
 #execute unless score tempLength lightningVars > 0 constants run particle minecraft:witch ~ ~ ~ 0 0 0 0 1
 execute unless score tempLength lightningVars > 0 constants if score segmentCount lightningVars > 0 constants run function breath_of_the_wild:effects/lightning/split
-execute if score tempLength lightningVars > 0 constants positioned ^ ^ ^.4 run function breath_of_the_wild:effects/lightning/raycast
+execute if score tempLength lightningVars > 0 constants positioned ^ ^ ^.2 run function breath_of_the_wild:effects/lightning/raycast
 #scoreboard players add tempLength lightningVars 1
 #tellraw @a ["AFTER: ",{"score":{"name":"tempLength","objective":"lightningVars"}}]
 #execute if score tempLength lightningVars matches 1 if score segmentCount lightningVars matches 1.. positioned ~ ~ ~ rotated ~20 ~ run particle minecraft:witch ~ ~ ~ 0 0 0 0 1

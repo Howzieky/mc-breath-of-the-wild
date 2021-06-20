@@ -3,7 +3,7 @@ execute if score @s stamina matches 0.. run scoreboard players remove @s stamina
 effect give @s minecraft:levitation 1 253 true
 effect clear @s[tag=inUpdraft] minecraft:levitation
 execute if score @s stamina matches 0 run function breath_of_the_wild:paraglider/end
-execute if predicate breath_of_the_wild:on_ground if score galeFlyingCounter timers matches 25.. run function breath_of_the_wild:paraglider/end
+execute if score galeFlyingCounter timers matches 25.. if entity @s[tag=onGround,tag=!selectingRune] run function breath_of_the_wild:paraglider/end
 execute if predicate breath_of_the_wild:currently_hurt run function breath_of_the_wild:paraglider/end
 
 #execute rotated -10 ~ positioned ^ ^ ^.3 run tp @e[tag=paragliderSlime] ~ ~ ~

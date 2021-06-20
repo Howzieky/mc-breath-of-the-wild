@@ -1,3 +1,2 @@
-execute if score @s urbosaTimer matches 30 run particle minecraft:soul_fire_flame ~ ~1 ~ 0 0 0 .3 100 force
-execute if score @s urbosaTimer matches 30 run kill @s
+execute if score @s urbosaTimer matches 30.. run function breath_of_the_wild:abilities/urbosa/end_animation
 scoreboard players add @s urbosaTimer 1

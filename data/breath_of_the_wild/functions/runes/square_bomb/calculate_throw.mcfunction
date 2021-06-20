@@ -1,5 +1,6 @@
 execute as @s run function breath_of_the_wild:tools/nbt_to_temp_entity
 
+tp @e[tag=square_bomb] ~ ~ ~
 execute rotated ~ -40 run summon marker ^ ^ ^10 {Tags:["bombMathMarker"]}
 execute as @e[tag=bombMathMarker] run function breath_of_the_wild:tools/nbt_to_temp_entity
 scoreboard players operation @s xPos -= @e[tag=bombMathMarker] xPos

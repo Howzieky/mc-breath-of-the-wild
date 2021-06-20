@@ -1,5 +1,5 @@
 tag @p[tag=link] add stasisPath
-tag @e[tag=stasisTarget,limit=1] add recentStasis
+tag @e[tag=stasisFrozen,limit=1] add recentStasis
 execute at @s run summon minecraft:marker ~ ~ ~ {Tags:["stasisPathMarker"]}
 schedule function breath_of_the_wild:runes/stasis/end_path 7s replace
 
@@ -19,6 +19,6 @@ scoreboard players operation @s zPos *= @s stasisDamage
 execute store result storage minecraft:breath_of_the_wild tempEntity.Motion[0] double -.0002 run scoreboard players get @s xPos
 execute store result storage minecraft:breath_of_the_wild tempEntity.Motion[1] double -.0002 run scoreboard players get @s yPos
 execute store result storage minecraft:breath_of_the_wild tempEntity.Motion[2] double -.0002 run scoreboard players get @s zPos
-data modify entity @e[tag=stasisTarget,limit=1] Motion set from storage minecraft:breath_of_the_wild tempEntity.Motion
+data modify entity @e[tag=stasisFrozen,limit=1] Motion set from storage minecraft:breath_of_the_wild tempEntity.Motion
 #tellraw Howzieky {"nbt":"Motion","entity":"@s"}
 kill @e[tag=stasisMathMarker]
