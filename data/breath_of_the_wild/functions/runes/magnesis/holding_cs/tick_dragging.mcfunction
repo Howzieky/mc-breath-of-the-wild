@@ -1,5 +1,5 @@
 execute as @e[tag=selectedMagnesisEntity] run function breath_of_the_wild:runes/magnesis/calculate_movement
-#execute at @e[tag=selectedMagnesisEntity,limit=1] run tp @e[tag=magnesisBlockCarrier] ~ ~.1 ~ ~ ~
+execute at @e[tag=selectedMagnesisEntity,limit=1] run tp @e[tag=magnesisBlockCarrier] ~ ~.1 ~ ~ ~
 #say @e[tag=magnesisBlockCarrier] to @e[tag=selectedMagnesisEntity,limit=1]
 #execute as @e store result entity @s Air short 1 if entity @s[nbt={Air:0s}]
 #data merge entity @e[tag=magnesisFallingBlock,limit=1] {Air:1s}

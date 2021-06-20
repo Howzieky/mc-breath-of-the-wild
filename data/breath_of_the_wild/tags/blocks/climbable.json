@@ -1,0 +1,26 @@
+{
+ "values": [
+ "minecraft:air",
+ "minecraft:tall_grass",
+ "minecraft:torch",
+ "#minecraft:signs",
+ "minecraft:lava",
+ "minecraft:water",
+ "#minecraft:banners",
+ "#minecraft:beds",
+ "#minecraft:crops",
+ "#minecraft:buttons",
+ "#minecraft:campfires",
+ "#minecraft:candle_cakes",
+ "#minecraft:candles",
+ "#minecraft:carpets",
+ "#minecraft:beds",
+ "#minecraft:climbable",
+ "#minecraft:doors",
+ "#minecraft:fences",
+ "#minecraft:fence_gates",
+ "#minecraft:fire",
+ "#minecraft:flowers",
+ "#minecraft:flower_pots"
+ ]
+}

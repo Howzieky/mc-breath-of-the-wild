@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone"
+    },
+    "title": "",
+    "description": "",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_durability_changed"
+    }
+  },
+  "rewards": {
+    "function": "breath_of_the_wild:event_handlers/item_durability_changed"
+  }
+}

@@ -1,0 +1,12 @@
+execute anchored eyes rotated -130 1 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated -120 -27 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated -78 -36 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated -66 12 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated -29 -46 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 6 7 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 38 -46 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 49 4 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 70 -36 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 125 13 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 164 -10 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze
+execute anchored eyes rotated 175 -3 positioned ^ ^ ^20 facing entity @s eyes run function breath_of_the_wild:runes/stasis/draw_stasis_ray/freeze

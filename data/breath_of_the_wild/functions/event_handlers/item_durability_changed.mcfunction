@@ -1,0 +1,1 @@
+advancement revoke @s only breath_of_the_wild:item_durability_changed
